@@ -15,6 +15,7 @@ for (let indiceArray = 0; indiceArray < arrayEmail.length; indiceArray++) {
     if (arrayEmail[indiceArray] == emailUser) {
         console.log('la tua email è presente nella lista');
         divEmailPresente.innerHTML = 'la tua email è presente nella lista';
+        break;
     } else {
         console.log('non sei il benvenuto nel club');
         divEmailPresente.innerHTML = 'non sei il benvenuto nel club';
