@@ -21,7 +21,7 @@ for (let indiceArray = 0; indiceArray < arrayEmail.length; indiceArray++) {
     if (accettato == true) {
         console.log('la tua email è presente nella lista');
         divEmailPresente.innerHTML = `${emailUser} la tua email è presente nella lista`;
-        break;
+
     } else if (accettato == false) {
         console.log('non sei il benvenuto nel club');
         divEmailPresente.innerHTML = `${emailUser} non sei il benvenuto nel club`;
