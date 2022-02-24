@@ -8,20 +8,27 @@ let body = document.querySelector('body');
 
 
 
-
+let accettato = false;
 
 for (let indiceArray = 0; indiceArray < arrayEmail.length; indiceArray++) {
 
+
     if (arrayEmail[indiceArray].toLocaleLowerCase() == emailUser.toLocaleLowerCase()) {
+
+        accettato = true;
+    }
+
+    if (accettato == true) {
         console.log('la tua email è presente nella lista');
-        divEmailPresente.innerHTML = 'la tua email è presente nella lista';
+        divEmailPresente.innerHTML = `${emailUser} la tua email è presente nella lista`;
         break;
-    } else {
+    } else if (accettato == false) {
         console.log('non sei il benvenuto nel club');
-        divEmailPresente.innerHTML = 'non sei il benvenuto nel club';
+        divEmailPresente.innerHTML = `${emailUser} non sei il benvenuto nel club`;
     }
 
 }
 
 
 body.append(divEmailPresente);
+
