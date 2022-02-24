@@ -12,7 +12,7 @@ let body = document.querySelector('body');
 
 for (let indiceArray = 0; indiceArray < arrayEmail.length; indiceArray++) {
 
-    if (arrayEmail[indiceArray] == emailUser) {
+    if (arrayEmail[indiceArray].toLocaleLowerCase() == emailUser.toLocaleLowerCase()) {
         console.log('la tua email è presente nella lista');
         divEmailPresente.innerHTML = 'la tua email è presente nella lista';
         break;
