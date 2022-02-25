@@ -1,8 +1,8 @@
 let arrayEmail = ['henry@gmail', 'gabriel@gmail', 'mauro@gmail', 'totti@gmail', 'derossi@gmail', 'montella@gmail', 'candela@gmail', 'mexes@gmail'];
 
-// let emailUser = document.querySelector('#email').value;
+
 // console.log(emailUser);
-let emailUser = prompt('scrivi l email');
+// let emailUser = prompt('scrivi l email');
 
 
 let divEmailPresente = document.createElement('div');
@@ -25,7 +25,7 @@ let btn = document.querySelector('#btn');
 btn.addEventListener('click', laFunzione);
 
 function laFunzione() {
-
+    let emailUser = document.getElementById('email').value;
     let accettato = false;
 
     for (let indiceArray = 0; indiceArray < arrayEmail.length; indiceArray++) {
