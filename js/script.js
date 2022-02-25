@@ -1,6 +1,8 @@
 let arrayEmail = ['henry@gmail', 'gabriel@gmail', 'mauro@gmail', 'totti@gmail', 'derossi@gmail', 'montella@gmail', 'candela@gmail', 'mexes@gmail'];
 
-let emailUser = prompt('scrivi la tua email');
+// let emailUser = document.querySelector('#email').value;
+// console.log(emailUser);
+let emailUser = prompt('scrivi l email');
 
 
 let divEmailPresente = document.createElement('div');
@@ -23,25 +25,17 @@ function laFunzione() {
     let accettato = false;
 
     for (let indiceArray = 0; indiceArray < arrayEmail.length; indiceArray++) {
-
-
         if (arrayEmail[indiceArray].toLocaleLowerCase() == emailUser.toLocaleLowerCase()) {
-
             accettato = true;
-            console.log(accettato);
+            console.log(emailUser);
         }
+    }
 
-        if (accettato == true) {
-            console.log('la tua email è presente nella lista');
-            divEmailPresente.innerHTML = `${emailUser} la tua email è presente nella lista`;
-            console.log(accettato);
 
-        } else if (accettato == false) {
-            console.log('non sei il benvenuto nel club');
-            divEmailPresente.innerHTML = `${emailUser} non sei il benvenuto nel club`;
-            console.log(accettato);
-        }
-
+    if (accettato) {
+        divEmailPresente.innerHTML = 'email presente';
+    } else {
+        divEmailPresente.innerHTML = 'email NON presente nella lista';
     }
 
 };
